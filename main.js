@@ -83,8 +83,22 @@ for (let i = 0; i < squadre.length; i++) {
     element.falli = numRandom(0,60);
 }
 
-console.table(squadre)
+// console.table(squadre)
 
+let newSquadre = [];
+
+for (let i = 0; i < squadre.length; i++) {
+    newSquadre.push({
+        nome: squadre[i].nome,
+        falli: squadre[i].falli
+    })
+};
+
+console.table(newSquadre);
+//DESTRUCTURING
+  const [squadra1,squadra2,squadra3,squadra4] = newSquadre;
+
+console.log(squadra1,squadra2,squadra3,squadra4);
 /**
  * FUNCTION
  * */

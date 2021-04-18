@@ -54,55 +54,143 @@
 
 
 
-const squadre = [
+// const squadre = [
+//     {
+//         nome: 'Palermo',
+//         punti: 0,
+//         falli: 0
+//     },
+//     {
+//         nome: 'Catania',
+//         punti: 0,
+//         falli: 0
+//     },
+//     {
+//         nome: 'Brescia',
+//         punti: 0,
+//         falli: 0
+//     },
+//     {
+//         nome: 'Pescara',
+//         punti: 0,
+//         falli: 0
+//     },
+// ];
+
+// for (let i = 0; i < squadre.length; i++) {
+//     const element = squadre[i];
+//     element.punti = numRandom(0,60);
+//     element.falli = numRandom(0,60);
+// }
+
+// // console.table(squadre)
+
+// let newSquadre = [];
+
+// for (let i = 0; i < squadre.length; i++) {
+//     newSquadre.push({
+//         nome: squadre[i].nome,
+//         falli: squadre[i].falli
+//     })
+// };
+
+// console.table(newSquadre);
+// //DESTRUCTURING
+//   const [squadra1,squadra2,squadra3,squadra4] = newSquadre;
+
+// console.log(squadra1,squadra2,squadra3,squadra4);
+// /**
+//  * FUNCTION
+//  * */
+
+// function numRandom(min, max) {
+//     return Math.floor(Math.random()* (max - min + 1) + min);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * jsnack 3
+ * Si scriva una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+ * La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri
+ * inseriti dall'utente (è possibile usare, ad esempio, for/foreach/filter)
+ * */
+
+// const array = ['Paolo' , 'Luca' , 'Marco' , 'Matteo' , 'Pietro' , 'Giovanni'];
+
+// let min = parseInt( prompt(`Inserisci numero da 0 a ${array.length - 1}`));
+// //VERIFICA NUMERO UTENTE MIN
+// while (isNaN(min) || min < 0 || min > array.length ){
+//     min = parseInt( prompt(`Valore non valido. Inserisci numero da 0 a ${array.length - 1}`));
+// };
+
+
+// let max = parseInt( prompt(`Inserisci numero da ${min} a ${array.length - 1}`));
+// //VERIFICA NUMERO UTENTE MAX
+// while (isNaN(max) || max < min || max > array.length ){
+//     max = parseInt( prompt(`Valore non valido. Inserisci numero da ${min} a ${array.length - 1}`));
+// };
+
+// //FUNZIONE CHE CREA UN NUOVO ARRAY TRAMITE FILTER
+// const newArray = array.filter((e,i) =>{
+//     return (i >= min && i <= max );
+// });
+
+// console.log(array);
+// console.log(newArray);
+
+
+
+
+
+
+
+ /** jsnack 4
+ * Dato un'array con dei capi d'abbigliamento - oggetti che contengono informazioni su nome modello, tipologia e colore - 
+ * si aggiunga a ciascun elemento una ulteriore proprietà che indichi il costo del prodotto.
+ * Per inserire il costo del singolo prodotto si scriva una funzione che generi un numero random da 10 a 50
+ *  (potete sfruttare il map per aggiungere la nuova proprietà)
+*/
+
+
+const abbigliamento = [
     {
-        nome: 'Palermo',
-        punti: 0,
-        falli: 0
+        nome: '',
+        tipologia: '',
+        colore: ''
     },
     {
-        nome: 'Catania',
-        punti: 0,
-        falli: 0
+        nome: '',
+        tipologia: '',
+        colore: ''
     },
     {
-        nome: 'Brescia',
-        punti: 0,
-        falli: 0
+        nome: '',
+        tipologia: '',
+        colore: ''
     },
     {
-        nome: 'Pescara',
-        punti: 0,
-        falli: 0
+        nome: '',
+        tipologia: '',
+        colore: ''
     },
 ];
 
-for (let i = 0; i < squadre.length; i++) {
-    const element = squadre[i];
-    element.punti = numRandom(0,60);
-    element.falli = numRandom(0,60);
-}
 
-// console.table(squadre)
 
-let newSquadre = [];
 
-for (let i = 0; i < squadre.length; i++) {
-    newSquadre.push({
-        nome: squadre[i].nome,
-        falli: squadre[i].falli
-    })
+
+function numRandom(min,max){
+    Math.floor(Math.random() * (max - min + 1) + min);
 };
-
-console.table(newSquadre);
-//DESTRUCTURING
-  const [squadra1,squadra2,squadra3,squadra4] = newSquadre;
-
-console.log(squadra1,squadra2,squadra3,squadra4);
-/**
- * FUNCTION
- * */
-
-function numRandom(min, max) {
-    return Math.floor(Math.random()* (max - min + 1) + min);
-}
